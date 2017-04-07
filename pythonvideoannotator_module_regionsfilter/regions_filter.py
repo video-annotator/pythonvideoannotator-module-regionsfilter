@@ -13,7 +13,7 @@ from pyforms.Controls 	 import ControlProgress
 from pyforms.Controls 	 import ControlList
 from pyforms.Controls 	 import ControlCombo
 from pyforms.Controls 	 import ControlEmptyWidget
-from PyQt4 import QtGui
+
 
 from pythonvideoannotator.models.objects.object2d.datasets.path import Path
 from geometry_designer.modules.geometry_manual_designer.GeometryManualDesigner import GeometryManualDesigner
@@ -25,7 +25,10 @@ class RegionsFilter(BaseWidget):
 		BaseWidget.__init__(self, 'Regions filter', parent_win=parent)
 		self.mainwindow = parent
 
-		self.layout().setContentsMargins(10, 5, 10, 5)
+		if conf.PYFORMS_USE_QT5:
+			self.layout().setContentsMargins(5,5,5,5)
+		else:
+			self.layout().setMargin(5)
 		self.setMinimumHeight(300)
 		self.setMinimumWidth(500)
 

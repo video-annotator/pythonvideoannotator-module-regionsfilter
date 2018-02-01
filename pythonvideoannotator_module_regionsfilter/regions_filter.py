@@ -1,18 +1,18 @@
 import sys, os, shutil, re, pyforms, numpy as np, cv2
 from pysettings 		 import conf
 from pyforms 			 import BaseWidget
-from pyforms.Controls 	 import ControlFile
-from pyforms.Controls 	 import ControlPlayer
-from pyforms.Controls 	 import ControlButton
-from pyforms.Controls 	 import ControlNumber
-from pyforms.Controls 	 import ControlSlider
-from pyforms.Controls 	 import ControlCheckBox
-from pyforms.Controls 	 import ControlText
-from pyforms.Controls 	 import ControlCheckBoxList
-from pyforms.Controls 	 import ControlProgress
-from pyforms.Controls 	 import ControlList
-from pyforms.Controls 	 import ControlCombo
-from pyforms.Controls 	 import ControlEmptyWidget
+from pyforms.controls 	 import ControlFile
+from pyforms.controls 	 import ControlPlayer
+from pyforms.controls 	 import ControlButton
+from pyforms.controls 	 import ControlNumber
+from pyforms.controls 	 import ControlSlider
+from pyforms.controls 	 import ControlCheckBox
+from pyforms.controls 	 import ControlText
+from pyforms.controls 	 import ControlCheckBoxList
+from pyforms.controls 	 import ControlProgress
+from pyforms.controls 	 import ControlList
+from pyforms.controls 	 import ControlCombo
+from pyforms.controls 	 import ControlEmptyWidget
 
 from pythonvideoannotator_models_gui.dialogs import DatasetsDialog
 
@@ -34,10 +34,8 @@ class RegionsFilter(BaseWidget):
 		BaseWidget.__init__(self, 'Regions filter', parent_win=parent)
 		self.mainwindow = parent
 
-		if conf.PYFORMS_USE_QT5:
-			self.layout().setContentsMargins(5,5,5,5)
-		else:
-			self.layout().setMargin(5)
+		self.set_margin(5)
+		
 		self.setMinimumHeight(300)
 		self.setMinimumWidth(500)
 

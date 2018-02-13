@@ -1,5 +1,5 @@
 import sys, os, shutil, re, pyforms, numpy as np, cv2
-from pysettings 		 import conf
+from pyforms 		 import conf
 from pyforms 			 import BaseWidget
 from pyforms.controls 	 import ControlFile
 from pyforms.controls 	 import ControlPlayer

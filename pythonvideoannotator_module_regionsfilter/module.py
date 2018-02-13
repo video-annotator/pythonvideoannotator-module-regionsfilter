@@ -1,5 +1,5 @@
 import cv2
-from pysettings import conf
+from pyforms import conf
 from pythonvideoannotator_module_regionsfilter.regions_filter import RegionsFilter
 
 

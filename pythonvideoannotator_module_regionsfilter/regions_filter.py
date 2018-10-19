@@ -1,6 +1,6 @@
 import sys, os, shutil, re, pyforms, numpy as np, cv2
-from pyforms 		 import conf
-from pyforms 			 import BaseWidget
+from confapp import conf
+from pyforms.basewidget import BaseWidget
 from pyforms.controls 	 import ControlFile
 from pyforms.controls 	 import ControlPlayer
 from pyforms.controls 	 import ControlButton

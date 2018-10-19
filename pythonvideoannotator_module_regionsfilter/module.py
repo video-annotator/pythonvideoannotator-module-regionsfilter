@@ -1,5 +1,5 @@
 import cv2
-from pyforms import conf
+from confapp import conf
 from pythonvideoannotator_module_regionsfilter.regions_filter import RegionsFilter
 
 
@@ -21,7 +21,7 @@ class Module(object):
 		self.regions_filter.video_filename = self._video.value
 
 	def add_event_2_timeline(self, track, evt_name, begin, end):
-		self._time.addPeriod( (begin, end, evt_name), track )
+		self._time.add_period( (begin, end, evt_name), track )
 
 	def add_dataset_event(self, dataset):
 		super(Module, self).add_dataset_event(dataset)

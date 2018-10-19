@@ -39,6 +39,8 @@ class RegionsFilter(BaseWidget):
 		self.setMinimumHeight(300)
 		self.setMinimumWidth(500)
 
+		self._paths = []
+
 		self._pathspanel	= ControlEmptyWidget('Path to process')
 		self._geomspanel 	= ControlEmptyWidget('Geometries')		
 		self._apply  		= ControlButton('Apply', checkable=True)

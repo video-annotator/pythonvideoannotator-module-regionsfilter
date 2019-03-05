@@ -21,7 +21,7 @@ class Module(object):
 		self.regions_filter.video_filename = self._video.value
 
 	def add_event_2_timeline(self, track, evt_name, begin, end):
-		self._time.add_period( (begin, end, evt_name), track )
+		self._time.add_event( begin, end, evt_name, track )
 
 	def add_dataset_event(self, dataset):
 		super(Module, self).add_dataset_event(dataset)

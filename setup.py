@@ -7,9 +7,14 @@ import re
 with open('README.md', 'r') as fd:
     long_description = fd.read()
 
+import os, re;
+with open(os.path.join(os.path.dirname(__file__), 'pythonvideoannotator_module_regionsfilter','__init__.py')) as fd:
+	version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', fd.read(), re.MULTILINE).group(1)
+
+
 setup(
 	name='Python video annotator - module - regions filter',
-	version="0.4",
+	version=version,
 	description="""""",
 	author=['Ricardo Ribeiro'],
 	author_email='ricardojvr@gmail.com',
